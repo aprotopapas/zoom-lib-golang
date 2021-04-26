@@ -38,7 +38,7 @@ type Client struct {
 	Secret    string
 	Transport http.RoundTripper
 	Timeout   time.Duration // set to value > 0 to enable a request timeout
-	endpoint  string
+	Endpoint  string
 }
 
 // NewClient returns a new API client
@@ -52,7 +52,7 @@ func NewClient(apiKey string, apiSecret string) *Client {
 	return &Client{
 		Key:      apiKey,
 		Secret:   apiSecret,
-		endpoint: uri.String(),
+		Endpoint: uri.String(),
 	}
 }
 
