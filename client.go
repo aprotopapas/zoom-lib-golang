@@ -106,7 +106,7 @@ func (c *Client) httpRequest(opts requestV2Opts) (*http.Request, error) {
 	}
 
 	// set request URL
-	requestURL := c.endpoint + opts.Path
+	requestURL := c.Endpoint + opts.Path
 	if len(values) > 0 {
 		requestURL += "?" + values.Encode()
 	}
